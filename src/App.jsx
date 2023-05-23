@@ -9,6 +9,9 @@ function App() {
   return (
     <>  
     <h1>hola chic@s</h1>
+    <h2>Estamos en la rama developer
+      
+    </h2>
 
     </>
   )
