@@ -1,0 +1,91 @@
+{
+    "users": [
+      {
+        "email": "emanuel@emanuel",
+        "password": "$2a$10$a/wTNGVKWibUAVcAvOVY4O/WhoH.gnDDMI/lCgmzrM9aRjlERzaLO",
+        "name": "emanuel",
+        "lastName": "emanuel",
+        "adress": "",
+        "phone": "",
+        "id": 7
+      },
+      {
+        "email": "rewel@rewel",
+        "password": "$2a$10$PVkNYpAlTlsjYMzvHslC8O0JeZHuKHdD1DJq0U6xwYzf/lULzdm7G",
+        "name": "rewel",
+        "lastName": "de galli",
+        "adress": "",
+        "phone": "",
+        "id": 8
+      },
+      {
+        "email": "everduim@everduim.com",
+        "password": "$2a$10$D6D5Ht0IXsT9tUWksmapu.ejS52B6M09a7PPPUzQ45t7HO/PkfR8q",
+        "name": "Emilio Antonio",
+        "lastName": "Everduim Guerra",
+        "address": "calle gaviota 68, 2i",
+        "phone": "",
+        "id": 9
+      },
+      {
+        "email": "carlos@perez.com",
+        "password": "$2a$10$fLStutmjsr0yA01mNb5nyuM4MrIJRer1190QKSXGW9nZMovfhX5li",
+        "name": "carlos",
+        "lastName": "perez",
+        "address": "Alcala",
+        "phone": "888333777",
+        "id": 10
+      }
+    ],
+    "products": [
+      {
+        "product": "Ever-2023/01",
+        "image": "https://i.pinimg.com/564x/2b/5a/a9/2b5aa9f964b20351a0f86f7136bb1a70.jpg",
+        "info": "Tate vintage round acetare-glass frame",
+        "price": "499,00€",
+        "id": 2
+      },
+      {
+        "product": "Ever-2023/02",
+        "image": "https://i.pinimg.com/564x/18/06/c5/1806c57ce7ed0a8418d3d6775ad8d5da.jpg",
+        "info": "Tate vintage round acetare-glass frame",
+        "price": "459,00€",
+        "id": 3
+      },
+      {
+        "product": "Ever-2023/03",
+        "image": "https://i.pinimg.com/564x/88/22/15/882215e9cbcbe47277a393d47acadf3e.jpg",
+        "info": "Tate vintage round acetare-glass frame",
+        "price": "399,00€",
+        "id": 4
+      },
+      {
+        "product": "Ever-2023/04",
+        "image": "https://i.pinimg.com/564x/9a/92/ce/9a92ce8b9342c72eddf26f97a95aa938.jpg",
+        "info": "Tate vintage round acetare-glass frame",
+        "price": "799,00€",
+        "id": 5
+      },
+      {
+        "product": "Ever-2023/05",
+        "image": "https://i.pinimg.com/564x/3e/ba/5d/3eba5d2642aacea75034727e3808d414.jpg",
+        "info": "Tate vintage round acetare-glass frame",
+        "price": "429,00€",
+        "id": 6
+      },
+      {
+        "product": "Ever-2023/06",
+        "image": "https://i.pinimg.com/564x/4f/93/88/4f9388048ac79ef78b9a7edb07ab34dd.jpg",
+        "info": "Tate vintage round acetare-glass frame",
+        "price": "499,00€",
+        "id": 7
+      },
+      {
+        "product": "Ever-2023/07",
+        "image": "https://i.pinimg.com/564x/d8/5e/f4/d85ef4d35c042ff86ea6a9670e38d2f5.jpg",
+        "info": "Tate vintage round acetare-glass frame",
+        "price": "499,00€",
+        "id": 8
+      }
+    ]
+  }
