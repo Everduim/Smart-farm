@@ -20,7 +20,7 @@ const Home = () => {
        
       </div>
       <div className="login">
-      <h1 className="api">Smart Farm</h1>
+      <h1 className="api">Smart Farm 🌳</h1>
       <form className="home-form">
         <label className="home" htmlFor="email">
           Correo electrónico:

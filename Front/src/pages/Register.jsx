@@ -1,9 +1,9 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+
+ import React from "react";
 import "../styles/Register.scss";
 import { API } from "../services/Api";
-
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
 
   const { register, handleSubmit } = useForm();
