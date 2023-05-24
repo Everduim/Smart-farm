@@ -1,10 +1,12 @@
-import React from 'react'
-import "./Nav.scss"
+import React from 'react';
 
-const Nav = () => {
+
+const Nav = ({ isOpen }) => {
   return (
-    <div>Nav</div>
-  )
-}
+    <nav className={`nav ${isOpen ? 'nav--open' : ''}`}>
+      <link rel="stylesheet" href="fegege" />
+    </nav>
+  );
+};
 
-export default Nav
+export default Nav;
