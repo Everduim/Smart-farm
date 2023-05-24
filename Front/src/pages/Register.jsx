@@ -1,4 +1,6 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import "../styles/Register.scss";
 import { API } from "../services/Api";
 
@@ -9,7 +11,7 @@ const Register = () => {
 
   const onSubmit = (formData) => {
     API.post("users/register", formData).then((res) => {
-
+      console.log(res);
       
     });
     alert("¡TE HAS REGISTRADO!");
