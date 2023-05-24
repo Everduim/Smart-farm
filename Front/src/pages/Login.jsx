@@ -2,14 +2,17 @@
 import "../styles/Login.scss";
 import { useForm } from "react-hook-form";
 import { API } from "../services/Api";
-// import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (formData) => {
     // console.log(formData);
-    API.post("users/login", formData).then((res) => {});
+    API.post("/login", formData).then((res) => {
+    
     alert("¡HAS INICIADO SESIÓN!");
-    // navigate("/animales");
+    Navigate("/animales");
+    });
+    
   };
 
   return (

@@ -12,10 +12,10 @@ const Register = () => {
   const onSubmit = (formData) => {
     API.post("/register", formData).then((res) => {
       console.log(res);
-      
+      alert("¡TE HAS REGISTRADO!");
+      navigate("/login");
     });
-    alert("¡TE HAS REGISTRADO!");
-    navigate("/login");
+    
   };
 
   return (
