@@ -1,0 +1,82 @@
+$color-primario: #4caf50;
+$color-secundario: #8bc34a;
+$color-fondo: #f2f2f2;
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $color-fondo;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .texto-home {
+    margin-bottom: 20px;
+  }
+
+  .cabecera {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: $color-primario;
+  }
+
+  .cabecera1 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: $color-primario;
+  }
+
+  .texto,
+  .texto1,
+  .texto2,
+  .texto3,
+  .texto4 {
+    margin-bottom: 10px;
+  }
+
+  .api {
+    text-align: center;
+    font-size: 24px;
+    color: $color-primario;
+  }
+
+  .home-form {
+    margin-top: 20px;
+    
+  }
+
+  .home,
+  .home2 {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: $color-primario;
+  }
+
+  .home1,
+  .home3 {
+    width: 95%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid $color-primario;
+    border-radius: 5px;
+    border-width: 5px;
+  }
+
+  .home4 {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: $color-primario;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-secundario;
+    }
+  }
+}

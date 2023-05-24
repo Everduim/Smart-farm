@@ -1,18 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import Home from './pages/Home'
+import Animales from './pages/Animales'
+import AnimalesID from './pages/AnimalesID'
+import Register from './pages/Register'
+import Login from './pages/Login'
+import Nav from './core/Nav/Nav'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
+    
+    
     <>  
-    <h1>hola chic@s</h1>
-    <h2>Estamos en la rama developer
-      
-    </h2>
-
+     <Nav/>
+    <Home/>
+   <Animales/>
+   <AnimalesID/>
+   <Register/>
+   <Login/>
     </>
   )
 }
