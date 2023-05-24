@@ -15,6 +15,7 @@ $color-fondo: #f2f2f2;
   }
 
   .cabecera {
+    font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
@@ -34,9 +35,11 @@ $color-fondo: #f2f2f2;
   .texto3,
   .texto4 {
     margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
   }
 
   .api {
+    font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     font-size: 24px;
     color: $color-primario;
@@ -64,19 +67,46 @@ $color-fondo: #f2f2f2;
     border-radius: 5px;
     border-width: 5px;
   }
-
-  .home4 {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: $color-primario;
-    color: #fff;
+  button.home4 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d4910b9c;
+    color: #FFF;
+    text-decoration: none;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo cuando el ratón está encima del botón */
+  button.home4:hover {
+    background-color:$color-primario ;
     cursor: pointer;
-
-    &:hover {
-      background-color: $color-secundario;
+    transform: scale(1.1);
+  }
+  
+  /* Estilo cuando el botón está presionado */
+  button.home4:active {
+    background-color: #FF9900;
+    transform: translateY(1px);
+  }
+  
+  /* Estilo para el texto dentro del botón */
+  button.home4 span {
+    display: inline-block;
+    vertical-align: middle;
+    
+  }
+  @media (max-width: 600px) {
+    .container {
+      max-width: 100%;
     }
   }
-}
+  }
+
+  
+  
+
