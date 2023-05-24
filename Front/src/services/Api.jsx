@@ -12,6 +12,6 @@ export const APIHeaders = {
 }
 
 export const API = axios.create({
-    baseURL: "http://localhost:5173/",
+    baseURL: "http://localhost:3000/",
     headers: APIHeaders,
 })

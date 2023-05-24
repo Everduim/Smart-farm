@@ -1,5 +1,5 @@
 
- import React from "react";
+import React from "react";
 import "../styles/Register.scss";
 import { API } from "../services/Api";
 import { useForm } from "react-hook-form";
@@ -10,7 +10,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const onSubmit = (formData) => {
-    API.post("users/register", formData).then((res) => {
+    API.post("/register", formData).then((res) => {
       console.log(res);
       
     });
