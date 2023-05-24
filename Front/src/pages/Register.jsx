@@ -1,4 +1,5 @@
-// import React from "react";
+
+ import React from "react";
 import "../styles/Register.scss";
 import { API } from "../services/Api";
 import { useForm } from "react-hook-form";
@@ -10,7 +11,7 @@ const Register = () => {
 
   const onSubmit = (formData) => {
     API.post("users/register", formData).then((res) => {
-
+      console.log(res);
       
     });
     alert("¡TE HAS REGISTRADO!");
