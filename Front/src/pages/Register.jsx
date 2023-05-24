@@ -3,11 +3,15 @@ import "../styles/Register.scss";
 import { API } from "../services/Api";
 
 const Register = () => {
+
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
 
   const onSubmit = (formData) => {
-    API.post("users/register", formData).then((res) => {});
+    API.post("users/register", formData).then((res) => {
+
+      
+    });
     alert("¡TE HAS REGISTRADO!");
     navigate("/login");
   };
