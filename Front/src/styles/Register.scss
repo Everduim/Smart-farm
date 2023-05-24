@@ -1,0 +1,78 @@
+$color-primario: #4caf50;
+$color-secundario: #8bc34a;
+$color-fondo: #f2f2f2;
+  /* Estilos para el formulario con temática ganadera */
+  .form_registro {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .form_registro label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:#4caf50;
+  }
+
+  .form_registro input[type="text"],
+  .form_registro input[type="email"],
+  .form_registro input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #4caf50;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .form_registro input[type="text"]::placeholder,
+  .form_registro input[type="email"]::placeholder,
+  .form_registro input[type="password"]::placeholder {
+    color: #999;
+  }
+
+  /* Estilos base del botón */
+button.boton_registro {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFB400;
+  color: #FFF;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo cuando el ratón está encima del botón */
+button.boton_registro:hover {
+  background-color:$color-primario ;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* Estilo cuando el botón está presionado */
+button.boton_registro:active {
+  background-color:$color-primario ;
+  transform: translateY(3px);
+}
+
+
+  /* Estilos responsive */
+  @media (max-width: 600px) {
+    .form_registro {
+      max-width: 100%;
+    }
+ 
+  }
+
+
+
