@@ -1,0 +1,113 @@
+$color-primario: #4caf50;
+$color-secundario: #8bc34a;
+$color-fondo: #f2f2f2;
+
+.container {
+  max-width: 400%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $color-fondo;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .texto-home {
+    margin-bottom: 20px;
+  }
+
+  .cabecera {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: $color-primario;
+  }
+
+  .cabecera1 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: $color-primario;
+  }
+
+  .texto,
+  .texto1,
+  .texto2,
+  .texto3,
+  .texto4 {
+    margin-bottom: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .api {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color: $color-primario;
+  }
+
+  .home-form {
+    margin-top: 20px;
+    
+  }
+
+  .home,
+  .home2 {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: $color-primario;
+  }
+
+  .home1,
+  .home3 {
+    width: 60%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid $color-primario;
+    border-radius: 5px;
+    border-width: 5px;
+  }
+  button.home4 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d4910b9c;
+    color: #FFF;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo cuando el ratón está encima del botón */
+  button.home4:hover {
+    background-color:$color-primario ;
+    cursor: pointer;
+    transform: scale(1.1);
+    color: black;
+  }
+  
+  /* Estilo cuando el botón está presionado */
+  button.home4:active {
+    background-color: #FF9900;
+    transform: translateY(1px);
+  }
+  
+  /* Estilo para el texto dentro del botón */
+  button.home4 span {
+    display: inline-block;
+    vertical-align: middle;
+    
+  }
+  @media (max-width: 600px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+  }
+
+  
+  
+

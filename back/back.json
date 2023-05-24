@@ -1,28 +1,28 @@
 {
-    "users": [
-      {
-        "empresa": "",
-        "cif": "",
-        "email": "",
-        "responsable": "",
-        "direccion": "",
-        "telefono": "",
-        "contraseña": "" 
-      }
-    ],
-    "especies": [
-      {
-        "tipo": "",
-        "imagen": ""
-      }
-    ],
-    "ejemplar": [
-      {
-        "numeroId": "",
-        "sexo": "",
-        "especie": "",
-        "edad": ""
-      }
-    ]
-
-  }
+  "users": [
+    {
+      "email": "hola@hola.com",
+      "password": "$2a$10$KKK93m37vZMM/G.bLVBUWOrTSZAu8JM5CCan8JPeIjokvtN02ig4O",
+      "empresa": "hola1",
+      "cif": "R23456754",
+      "responsable": "qq",
+      "direccion": "qq",
+      "numero": "234323561",
+      "id": 1
+    }
+  ],
+  "especies": [
+    {
+      "tipo": "",
+      "imagen": ""
+    }
+  ],
+  "ejemplar": [
+    {
+      "numeroId": "",
+      "sexo": "",
+      "especie": "",
+      "edad": ""
+    }
+  ]
+}
