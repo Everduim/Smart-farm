@@ -30,10 +30,11 @@ const Home = () => {
           Contraseña:
         </label>
         <input className="home3" type="password" id="password" />
-        <button className="home4" type="submit">
+       
+      </form>
+      <button className="home4" type="submit">
           Iniciar sesión
         </button>
-      </form>
       </div>
     </div>
   );

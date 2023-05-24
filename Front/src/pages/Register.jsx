@@ -80,8 +80,9 @@ const Register = () => {
           pattern: /^(?=.*[A-Z])(?=.*\d).{5,}$/,
         })}
       />
-
+         <div>
         <button className="boton_registro" type="submit">Registrarse</button>
+        </div>
     </form>
   );
 };

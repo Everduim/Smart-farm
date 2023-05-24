@@ -1,0 +1,73 @@
+$color-primario: #4caf50;
+$color-secundario: #8bc34a;
+$color-fondo: #f2f2f2;
+
+/* Variables de color */
+:root {
+    --color-primario: #4caf50;
+    --color-secundario: #8bc34a;
+    --color-fondo: #f2f2f2;
+  }
+  
+  /* Estilos para el formulario */
+  .form_login {
+    max-width: 400%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: $color-fondo;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  .form_login label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color:#4caf50;
+  }
+  
+  .form_login input {
+    display: block;
+    width: 60%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid $color-primario;
+
+    border-radius: 5px;
+    border-width: 5px;
+    
+  }
+  
+  /* Estilos para el botón de inicio de sesión */
+  button.boton_login {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d4910b9c;
+    color: #FFF;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.boton_login:hover {
+    background-color:$color-primario ;
+    cursor: pointer;
+    transform: scale(1.1);
+    color: black;
+  }
+  
+  button.boton_login:active {
+    background-color:$color-primario ;
+    transform: translateY(3px);
+  }
+  @media (max-width: 600px) {
+    .form_login {
+      max-width: 100%;
+    }
+ 
+  }
