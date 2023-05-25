@@ -9,6 +9,26 @@
       "direccion": "qq",
       "numero": "234323561",
       "id": 1
+    },
+    {
+      "email": "mirame@gmail.com",
+      "password": "$2a$10$qc7MhW8IBlsMQvAru8QAuuveoMS2lHNeAqg6V5DrZUM6OEcVq7bLS",
+      "empresa": "aqui",
+      "cif": "A2345432",
+      "responsable": "qq",
+      "direccion": "wwe",
+      "numero": "454643212",
+      "id": 2
+    },
+    {
+      "email": "joseapruebame@gmail.com",
+      "password": "$2a$10$FzcQp8hIFaMByP9kbx1RkOIOoebqs9PeiNHabxzxvFGpCKUmrsgQG",
+      "empresa": "KLK",
+      "cif": "Q12345678",
+      "responsable": "ww",
+      "direccion": "ee",
+      "numero": "345789654",
+      "id": 3
     }
   ],
   "especies": [
