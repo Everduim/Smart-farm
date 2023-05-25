@@ -46,7 +46,7 @@ const Login = () => {
       />
       <p className="p_error">
         {errors?.password?.type === "pattern" &&
-          "La contraseña debe contener al menos una mayuscula y debe tener al menos 5 digitos"}
+          "*La contraseña debe contener al menos una mayuscula, una minuscula y debe contener al menos 5 digitos."}
       </p>
 
       <button className="boton_login" type="submit">
