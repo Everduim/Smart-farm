@@ -1,4 +1,4 @@
-
+/*
 .burger-menu {
    position: relative;
    display: inline-block;
@@ -31,4 +31,47 @@
    display: block;
  }
  
+  */
+
+  .burger-menu {
+    position: relative;
+    display: inline-block;
+    
+  }
   
+  .burger-menu__nav {
+    position: absolute;
+    display:none;
+    background-color: #fff;
+    border: 0px solid #ccc;
+    padding: 10px;
+    border-radius: 4px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .burger-menu__nav ul {
+    list-style: none;
+    padding: 1px;
+    margin: 0; 
+  }
+  
+  .burger-menu__nav li {
+    margin-bottom: 10px;
+  }
+  
+  .burger-menu__nav a {
+    color: #333;
+    text-decoration: none;
+    display: block; 
+    padding: 2px; 
+    transition: background-color 0.3s;
+  }
+  
+  .burger-menu__nav a:hover {
+    background-color: #f5f5f5; 
+  }
+  
+  .burger-menu:hover .burger-menu__nav {
+    display: block;
+  }
+

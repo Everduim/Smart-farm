@@ -13,12 +13,12 @@ const BurgerMenu = ({ isOpen, toggleMenu }) => {
       {isOpen && (
         <nav className="burger-menu__nav">
            <ul>
-       <li> <Link to="">Home</Link></li>
-        <li><Link to="/login">Login</Link></li>
-        <li><Link to="/register">register</Link></li>
+       <li> <Link to="">🏠Home</Link></li>
+        <li><Link to="/login">🔓Login</Link></li>
+        <li><Link to="/register">Register</Link></li>
         {jwt &&(
           <>
-          <li><Link to="/animales">Animales</Link></li>
+          <li><Link to="/animales">🐄Animales</Link></li>
           </>
         )}
       </ul>
