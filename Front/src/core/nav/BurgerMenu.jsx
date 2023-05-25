@@ -1,10 +1,12 @@
 import React from 'react';
 import "../nav/BurgerMenu.scss";
 import { Link } from "react-router-dom";
-
+import { JwtContext } from "../../context/jwtContext"
+import { useContext } from 'react';
 
 
 const BurgerMenu = ({ isOpen, toggleMenu }) => {
+  const { jwt} = useContext(JwtContext)
   return (
     <div className="burger-menu" onClick={toggleMenu}>
       <img src="../public/burger-green.png" alt="" />
@@ -14,8 +16,11 @@ const BurgerMenu = ({ isOpen, toggleMenu }) => {
        <li> <Link to="">Home</Link></li>
         <li><Link to="/login">Login</Link></li>
         <li><Link to="/register">register</Link></li>
-        <li><Link to="/animales">Animales</Link></li>
-        
+        {jwt &&(
+          <>
+          <li><Link to="/animales">Animales</Link></li>
+          </>
+        )}
       </ul>
 
         </nav>
