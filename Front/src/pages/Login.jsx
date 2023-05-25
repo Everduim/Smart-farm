@@ -45,10 +45,10 @@ const Login = () => {
           pattern: /^(?=.*[A-Z])(?=.*\d).{5,}$/,
         })}
       />
-      <p className="p_error">
+      <span className="p_error">
         {errors?.password?.type === "pattern" &&
-          "*La contraseña debe contener al menos una mayuscula, una minuscula y debe contener al menos 5 digitos."}
-      </p>
+          "*Contraseña inválida. Requisitos: mayúscula, minúscula y 5 dígitos."}
+      </span>
 
       <button className="boton_login" type="submit">
         Iniciar Sesión

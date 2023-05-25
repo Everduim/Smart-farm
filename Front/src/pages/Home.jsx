@@ -41,7 +41,7 @@ const Home = () => {
         <p className="register">¿ No estas registrado?</p>
         <h3>Registrate</h3>
         <a href="/register">
-         <p>Aquí</p>
+         <p>"Aquí"</p>
         </a>
       </div>
     </div>
