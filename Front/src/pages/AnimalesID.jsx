@@ -1,4 +1,3 @@
-import React from 'react'
 import "../styles/AnimalesId.scss"
 import { useParams } from 'react-router-dom'
 import React, { useEffect, useState } from "react";
