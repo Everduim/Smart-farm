@@ -1,12 +1,14 @@
-
 import React from "react";
 import "../styles/Register.scss";
 import { API } from "../services/Api";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 const Register = () => {
-
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const navigate = useNavigate();
 
   const onSubmit = (formData) => {
@@ -15,7 +17,6 @@ const Register = () => {
       alert("¡TE HAS REGISTRADO!");
       navigate("/login");
     });
-    
   };
 
   return (
@@ -37,12 +38,14 @@ const Register = () => {
           pattern: /^(?=.*[a-zA-Z]).{8,}$/,
         })}
       />
-
+      <p className="p_error">
+        {errors?.cif?.type === "pattern" && "*El CIF debe ser como el ejemplo"}
+      </p>
       <label htmlFor="email">Email:</label>
       <input
         type="email"
         id="email"
-        placeholder="porEjemplo@gmail.com"
+        placeholder="porejemplo@gmail.com"
         {...register("email", { required: true })}
       />
 
@@ -69,7 +72,9 @@ const Register = () => {
         {...register("numero", { required: true, pattern: /^[0-9]{9}$/ })}
         inputMode="numeric"
       />
-
+      <p className="p_error">
+        {errors?.numero?.type === "pattern" && "*El telefono debe tener 9 digitos"}
+      </p>
 
       <label htmlFor="password">Contraseña:</label>
       <input
@@ -80,9 +85,14 @@ const Register = () => {
           pattern: /^(?=.*[A-Z])(?=.*\d).{5,}$/,
         })}
       />
-         <div>
-        <button className="boton_registro" type="submit">Registrarse</button>
-        </div>
+      <p className="p_error">
+        {errors?.password?.type === "pattern" && "*La contraseña debe contener al menos una mayuscula y debe tener al menos 5 digitos"}
+      </p>
+      <div>
+        <button className="boton_registro" type="submit">
+          Registrarse
+        </button>
+      </div>
     </form>
   );
 };

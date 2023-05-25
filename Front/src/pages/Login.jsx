@@ -4,15 +4,17 @@ import { useForm } from "react-hook-form";
 import { API } from "../services/Api";
 import { Navigate } from "react-router-dom";
 const Login = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const onSubmit = (formData) => {
     // console.log(formData);
     API.post("/login", formData).then((res) => {
-    
-    alert("¡HAS INICIADO SESIÓN!");
-    Navigate("/animales");
+      alert("¡HAS INICIADO SESIÓN!");
+      Navigate("/animales");
     });
-    
   };
 
   return (
@@ -24,7 +26,7 @@ const Login = () => {
         placeholder="porEjemplo@gmail.com"
         {...register("email", { required: true })}
       />
-
+      {console.log(errors)}
       <label htmlFor="password">Contraseña:</label>
       <input
         type="password"
@@ -34,6 +36,10 @@ const Login = () => {
           pattern: /^(?=.*[A-Z])(?=.*\d).{5,}$/,
         })}
       />
+      <p className="p_error">
+        {errors?.password?.type === "pattern" &&
+          "La contraseña debe contener al menos una mayuscula y debe tener al menos 5 digitos"}
+      </p>
 
       <button className="boton_login" type="submit">
         Iniciar Sesión
