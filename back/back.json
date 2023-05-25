@@ -29,6 +29,32 @@
       "direccion": "ee",
       "numero": "345789654",
       "id": 3
+    },
+    {
+      "email": "si@gmail.com",
+      "password": "$2a$10$Gx8SCshTA68Z5Ah6HU3i.OgJ9Lai./xIctAUEjva18ew9iT7N9iqS",
+      "empresa": "upgrade",
+      "cif": "R23456754",
+      "responsable": "agua",
+      "calle": "matalascañas",
+      "CP": "32131",
+      "ciudad": "marbella",
+      "pais": "andorra",
+      "numero": "345234562",
+      "id": 4
+    },
+    {
+      "email": "nilofc91@gmail.com",
+      "password": "$2a$10$viFhEV6vvMOerutf9q1YMOlyCoAh6gF/OCycozBtZr.YdCl4vOWn6",
+      "empresa": "hola1",
+      "cif": "R23456754",
+      "responsable": "",
+      "calle": "matalascañas",
+      "CP": "23456",
+      "ciudad": "qq",
+      "pais": "qq",
+      "numero": "681187555",
+      "id": 5
     }
   ],
   "especies": [
