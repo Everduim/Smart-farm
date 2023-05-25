@@ -1,19 +1,27 @@
-// import React from "react";
+ import React from "react";
+import { useContext } from "react"
 import "../styles/Login.scss";
+import { JwtContext } from "../context/jwtContext"
 import { useForm } from "react-hook-form";
 import { API } from "../services/Api";
-import { Navigate } from "react-router-dom";
+ import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const { setJwt } = useContext(JwtContext)
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
   const onSubmit = (formData) => {
-    // console.log(formData);
+     
     API.post("/login", formData).then((res) => {
+      console.log(res);
+      localStorage.setItem("token", res.data.accessToken);
+      localStorage.setItem("user", res.data.user.email);
+      setJwt(localStorage.getItem("token"));
       alert("¡HAS INICIADO SESIÓN!");
-      Navigate("/animales");
+       navigate("/animales");
     });
   };
 
