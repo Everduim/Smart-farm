@@ -3,73 +3,62 @@ $color-secundario: #8bc34a;
 $color-fondo: #f2f2f2;
   /* Estilos para el formulario con temática ganadera */
   .form_registro {
-    max-width: 400%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: $color-fondo;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   
-    font-family: 'Roboto Condensed', sans-serif;
+    width: 349px;
+    max-width: 400%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
   }
+  label {
+    color: #333;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    display: flex;
+
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-color:#886214 ;
+  
+    border-radius: 5px;
+    border-width: 5px;
+
+    &:focus {
+      outline: none;
+      border-color: #009688;
+    }
+  }
+
+  .p_error {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  .boton_registro {
+    background-color: #009688;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #00796b;
+    }
+  }
+
+
   .p_error {
     color: red;
   }
-
-  .form_registro label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color:#4caf50;
-  }
-
-  .form_registro input[type="text"],
-  .form_registro input[type="email"],
-  .form_registro input[type="password"] {
-    width: 60%;
-    padding: 8px;
-    border: 1px solid $color-primario;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #555;
-  }
-
-  .form_registro input[type="text"]::placeholder,
-  .form_registro input[type="email"]::placeholder,
-  .form_registro input[type="password"]::placeholder {
-    color: #999;
-    
-  }
-
-  /* Estilos base del botón */
-button.boton_registro {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #d4910b9c;
-  color: #FFF;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-/* Estilo cuando el ratón está encima del botón */
-button.boton_registro:hover {
-  background-color:$color-primario ;
-  cursor: pointer;
-  transform: scale(1.1);
-  color: black;
-}
-
-/* Estilo cuando el botón está presionado */
-button.boton_registro:active {
-  background-color:$color-primario ;
-  transform: translateY(3px);
-}
+   
 
 
   /* Estilos responsive */

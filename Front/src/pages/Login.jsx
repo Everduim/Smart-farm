@@ -18,8 +18,9 @@ const Login = () => {
   };
 
   return (
+    <div className="login2">
     <form className="form_login" onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="email">Email:</label>
+      <label htmlFor="email">Email</label>
       <input
         type="email"
         id="email"
@@ -27,7 +28,7 @@ const Login = () => {
         {...register("email", { required: true })}
       />
       {console.log(errors)}
-      <label htmlFor="password">Contraseña:</label>
+      <label htmlFor="password">Contraseña</label>
       <input
         type="password"
         id="password"
@@ -45,6 +46,7 @@ const Login = () => {
         Iniciar Sesión
       </button>
     </form>
+    </div>
   );
 };
 
