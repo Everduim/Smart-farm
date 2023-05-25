@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import BurgerMenu from '../nav/BurgerMenu';
-import "../header/Header.scss"
+import "../header/Header.scss";
+import { JwtContext } from "../../context/jwtContext"
+import { ButtonLogout } from "../../components/ButtonLogout";
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 
 const Header = () => {
+  const { jwt} = useContext(JwtContext)
+  const email =localStorage.getItem('user')
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,7 +22,16 @@ const Header = () => {
             </div>    
 
       <img className='logo' src="../public/logo3.png" alt="logo" />
-      <img src="../public/out.png" alt="" />
+
+      <Link className="nav-li" to="/"></Link>
+
+      {jwt &&(
+
+      <ButtonLogout className="nav-li"></ButtonLogout>  
+      )}
+
+
+
     </header>
   );
 };
