@@ -1,73 +1,85 @@
 $color-primario: #4caf50;
 $color-secundario: #8bc34a;
 $color-fondo: #f2f2f2;
-  /* Estilos para el formulario con temática ganadera */
-  .form_registro {
-  
-    width: 349px;
-    max-width: 400%;
-  background-color: #f5f5f5;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
-  }
-  label {
-    color: #333;
-    font-weight: bold;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    display: flex;
-
-    width: 85%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-color:#886214 ;
-  
-    border-radius: 5px;
-    border-width: 5px;
-
-    &:focus {
-      outline: none;
-      border-color: #009688;
-    }
-  }
-
-  .p_error {
-    color: red;
-    margin-bottom: 10px;
-  }
-
-  .boton_registro {
-    background-color: #009688;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #00796b;
-    }
-  }
-
-
-  .p_error {
-    color: red;
-  }
-   
-
-
-  /* Estilos responsive */
-  @media (max-width: 600px) {
-    .form_registro {
-      max-width: 100%;
-    }
+.container-register {
+  height: 100%;
  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://images.theconversation.com/files/288142/original/file-20190815-136195-7x86ei.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop");
+
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.form_registro {
+  
+  // height: 115vh;
+  background-color: rgba(128, 128, 128, 0.241);
+  width: 350px;
+  max-width: 400%;
+  margin: 50px;
+  padding: 20px;
+  margin-bottom:13px;
+  border-radius: 5px;
+
+  text-align: center;
+}
+label {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: flex;
+
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-color: #886214;
+
+  border-radius: 5px;
+  border-width: 5px;
+
+  &:focus {
+    outline: none;
+    border-color: #009688;
   }
+}
+
+.p_error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.boton_registro {
+  background-color: #886214;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+    color: black;
+  }
+}
+
+.p_error {
+  color: red;
+}
 
 
-
+@media (max-width: 600px) {
+  .form_registro {
+    max-width: 100%;
+  }
+}
