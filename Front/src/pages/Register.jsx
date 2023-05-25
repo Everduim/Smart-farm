@@ -25,6 +25,7 @@ const Register = () => {
       <input
         type="text"
         id="empresa"
+        placeholder="Nombre de la empresa"
         {...register("empresa", { required: true })}
       />
 
@@ -39,7 +40,8 @@ const Register = () => {
         })}
       />
       <p className="p_error">
-        {errors?.cif?.type === "pattern" && "*El CIF debe ser como el ejemplo"}
+        {errors?.cif?.type === "pattern" &&
+          "*El CIF debe ser como el ejemplo: A34521953"}
       </p>
       <label htmlFor="email">Email:</label>
       <input
@@ -57,12 +59,39 @@ const Register = () => {
         {...register("responsable")}
       />
 
-      <label htmlFor="direccion">Dirección:</label>
+      <label htmlFor="calle">Calle:</label>
       <input
         type="text"
-        id="direccion"
-        placeholder="Calle, numero"
-        {...register("direccion", { required: true })}
+        id="calle"
+        placeholder="Nombre de la calle"
+        {...register("calle", { required: true })}
+      />
+      <label htmlFor="CP">Codigo Postal:</label>
+      <input
+        type="text"
+        id="CP"
+        placeholder="ej: 24004"
+        {...register("CP", { required: true, pattern: /^\d{5}$/ })}
+      />
+      <p className="p_error">
+        {errors?.CP?.type === "pattern" &&
+          "*El Codigo Postal dede contener 5 digitos."}
+      </p>
+
+      <label htmlFor="ciudad">Ciudad:</label>
+      <input
+        type="text"
+        id="ciudad"
+        placeholder="Nombre de la ciudad"
+        {...register("ciudad", { required: true })}
+      />
+
+      <label htmlFor="pais">Pais:</label>
+      <input
+        type="text"
+        id="pais"
+        placeholder="Nombre del Pais"
+        {...register("pais", { required: true })}
       />
 
       <label htmlFor="numero">Teléfono:</label>
@@ -73,7 +102,8 @@ const Register = () => {
         inputMode="numeric"
       />
       <p className="p_error">
-        {errors?.numero?.type === "pattern" && "*El telefono debe tener 9 digitos"}
+        {errors?.numero?.type === "pattern" &&
+          "*El telefono debe contener 9 digitos"}
       </p>
 
       <label htmlFor="password">Contraseña:</label>
@@ -86,7 +116,8 @@ const Register = () => {
         })}
       />
       <p className="p_error">
-        {errors?.password?.type === "pattern" && "*La contraseña debe contener al menos una mayuscula y debe tener al menos 5 digitos"}
+        {errors?.password?.type === "pattern" &&
+          "*La contraseña debe contener al menos una mayuscula, una minuscula y debe contener al menos 5 digitos."}
       </p>
       <div>
         <button className="boton_registro" type="submit">
