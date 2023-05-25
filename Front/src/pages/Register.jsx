@@ -12,7 +12,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const onSubmit = (formData) => {
-    API.post("/register", formData).then((res) => {
+    API.post("/usuario", formData).then((res) => {
       console.log(res);
       alert("¡TE HAS REGISTRADO!");
       navigate("/login");

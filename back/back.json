@@ -55,6 +55,19 @@
       "pais": "qq",
       "numero": "681187555",
       "id": 5
+    },
+    {
+      "email": "lloreria@gmail.com",
+      "password": "$2a$10$EECO2Qsu0FOc0cniSgyyF.m/pfZT9tRzvt5ems.zUyoV5ipBkrzeK",
+      "empresa": "lloreria",
+      "cif": "A2345432",
+      "responsable": "",
+      "calle": "matalascañas",
+      "CP": "23345",
+      "ciudad": "madrid",
+      "pais": "musulmania",
+      "numero": "345234324",
+      "id": 6
     }
   ],
   "especies": [
