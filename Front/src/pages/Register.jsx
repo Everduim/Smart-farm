@@ -121,7 +121,7 @@ const Register = () => {
           {errors?.password?.type === "pattern" &&
             "*La contraseña debe contener al menos una mayuscula, una minuscula y debe contener al menos 5 digitos."}
         </p>
-        <div>
+        <div className="btregis">
           <button className="boton_registro" type="submit">
             Registrarse
           </button>

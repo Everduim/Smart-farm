@@ -3,32 +3,30 @@ $color-secundario: #8bc34a;
 $color-fondo: #f2f2f2;
 .container-register {
   height: 100%;
- 
+
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url("https://images.theconversation.com/files/288142/original/file-20190815-136195-7x86ei.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop");
-
 
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
 .form_registro {
-  
-  // height: 115vh;
+  height: 115vh;
   background-color: rgba(128, 128, 128, 0.241);
   width: 350px;
   max-width: 400%;
   margin: 50px;
   padding: 20px;
-  margin-bottom:13px;
+  margin-bottom: 13px;
   border-radius: 5px;
 
-  text-align: center;
+  // text-align: center;
 }
 label {
-  color: #ffffff;
+  color: #080707;
   font-weight: bold;
   font-size: 15px;
 }
@@ -44,20 +42,34 @@ input[type="password"] {
   border-color: #886214;
 
   border-radius: 5px;
-  border-width: 5px;
+  border-width: 3px;
 
-  &:focus {
-    outline: none;
-    border-color: #009688;
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    // color: black;
   }
+
+  // &:focus {
+  //   outline: none;
+  //   border-color: #009688;
+  // }
 }
 
 .p_error {
   color: red;
   margin-bottom: 10px;
 }
+.btregis {
+  display: flex;
+  margin-top: 15px;
+
+  justify-content: center;
+}
 
 .boton_registro {
+  text-align: center;
   background-color: #886214;
   color: #fff;
   padding: 10px 20px;
@@ -66,17 +78,13 @@ input[type="password"] {
   cursor: pointer;
 
   &:hover {
-    background-color: white;
-    cursor: pointer;
     transform: scale(1.1);
-    color: black;
   }
 }
 
 .p_error {
   color: red;
 }
-
 
 @media (max-width: 600px) {
   .form_registro {
