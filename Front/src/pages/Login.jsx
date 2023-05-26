@@ -15,9 +15,9 @@ const Login = () => {
   const navigate = useNavigate();
   const onSubmit = (formData) => {
      
-    API.post("/login", formData).then((res) => {
+    API.post("usuarios/login", formData).then((res) => {
       console.log(res);
-      localStorage.setItem("token", res.data.accessToken);
+      localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", res.data.user.email);
       setJwt(localStorage.getItem("token"));
       alert("¡HAS INICIADO SESIÓN!");
