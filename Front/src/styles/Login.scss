@@ -1,69 +1,58 @@
-$color-primario: #4caf50;
-$color-secundario: #8bc34a;
-$color-fondo: #f2f2f2;
-
-:root {
-  --color-primario: #4caf50;
-  --color-secundario: #8bc34a;
-  --color-fondo: #f2f2f2;
-}
-
 .login2 {
   height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-image: url("https://www.agromaquinaria.es/noticias/fotos/la-ganaderia-extensiva-un-0967446001629281468.jpg");
-
- 
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
+
 .form_login {
-  width: 350px;
-  max-width: 400%;
+  width: 100%;
+  max-width: 400px;
   margin: 50px;
   padding: 20px;
-background-color: rgba(128, 128, 128, 0.487);
+  background-color: rgba(128, 128, 128, 0.5);
   border-radius: 5px;
-  
-  text-align: center;
-}
 
-.form_login label {
-  font-size: 25px;
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #fefffd;
- 
-}
-.p_error {
-  border-radius: 10px;
-  
-  color: rgb(243, 18, 18);
-  font-size: 15px;
-  padding: 8px;
-  
-  
-}
+  label {
+    font-size: 25px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fefeff;
+  }
 
-.form_login input {
+  .p_error {
+    border-radius: 10px;
+    color: rgb(243, 18, 18);
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  input {
+   
+    width: 95%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-color: #886214;
+    border-radius: 5px;
+    border-width: 5px;
+  }
+}
+.botlogin{
   display: flex;
+  
 
-  width: 90%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-color:#886214 ;
-
-  border-radius: 5px;
-  border-width: 5px;
+  justify-content: center; 
 }
 
-button.boton_login {
-  display: inline-block;
+.boton_login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 20px;
   background-color: #886214;
   color: #fff;
@@ -74,21 +63,20 @@ button.boton_login {
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-}
 
-button.boton_login:hover {
-  background-color: white;
-  cursor: pointer;
-  transform: scale(1.1);
-  color: black;
-}
-
-button.boton_login:active {
-  background-color: $color-primario;
-  transform: translateY(3px);
-}
-@media (max-width: 600px) {
-  .form_login {
-    max-width: 100%;
+  &:hover {
+  
+    transform: scale(1.1);
   }
+
+  &:active {
+    transform: translateY(3px);
+  }
+
+  @media (max-width: 480px) {
+    &:hover {
+      background-color: #654321;
+    }
+  }
+
 }

@@ -34,15 +34,15 @@ const Home = () => {
         </h3>
       </div>
       <div className="login">
-     
-        <a href="/login" >
+        <a href="/login">
           <button className="home4">Login</button>
         </a>
         <p className="register">¿ No estas registrado?</p>
-        <h3>Registrate</h3>
-        <a href="/register">
-         <p>"Aquí"</p>
-        </a>
+        <h3>
+          <a href="/register">
+            <p>Registrate"Aquí"</p>
+          </a>
+        </h3>
       </div>
     </div>
   );

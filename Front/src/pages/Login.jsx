@@ -49,10 +49,11 @@ const Login = () => {
         {errors?.password?.type === "pattern" &&
           "*Contraseña inválida. Requisitos: mayúscula, minúscula y 5 dígitos."}
       </span>
-
-      <button className="boton_login" type="submit">
+       <div className="botlogin">
+      <button className="boton_login"  type="submit">
         Iniciar Sesión
       </button>
+      </div>
     </form>
     </div>
   );
