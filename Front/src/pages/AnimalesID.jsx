@@ -36,16 +36,20 @@ const AnimalesID = () => {
     <>
       {ejemplares.map((ejemplar) => {
         return (
-          <div className="container_animalId">
+          <div key={ejemplar._id} className="container_animalId">
             <h3>{ejemplar.identificador}</h3>
             <ul className="ul_container">
               <li>{ejemplar.especie.nombre} -  {ejemplar.especie.raza} - {ejemplar.especie.sexo}</li>
               <li>{ejemplar.edad}</li>
               <li>{ejemplar.peso}</li>
               <li>{ejemplar.salud}</li>
+              <img src={ejemplar.especie.imagen} ></img>
               <li><small>{ejemplar._id}</small></li>
             </ul>
             <button onClick={()=>tryEliminar(ejemplar)}>x</button>
+            
+            <button onClick={()=>tryPatch(ejemplar)}>editar</button>
+            
           </div>
         );
       })}
