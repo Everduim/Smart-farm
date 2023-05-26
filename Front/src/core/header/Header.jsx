@@ -21,7 +21,7 @@ const Header = () => {
             <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
             </div>    
 
-      <img className='logo' src="../public/logo3.png" alt="logo" />
+      <img className='logo' src="/logo3.png" alt="logo" />
 
       <Link className="nav-li" to="/"></Link>
 
