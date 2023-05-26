@@ -9,7 +9,7 @@ const BurgerMenu = ({ isOpen, toggleMenu }) => {
   const { jwt} = useContext(JwtContext)
   return (
     <div className="burger-menu" onClick={toggleMenu}>
-      <img src="../public/burger-green.png" alt="" />
+      <img src="/burger-green.png" alt="" />
       {isOpen && (
         <nav className="burger-menu__nav">
            <ul>
