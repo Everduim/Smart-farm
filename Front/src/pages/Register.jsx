@@ -12,7 +12,8 @@ const Register = () => {
   const navigate = useNavigate();
 
   const onSubmit = (formData) => {
-    API.post("/usuario", formData).then((res) => {
+    console.log(formData);
+    API.post("/usuarios", formData).then((res) => {
       console.log(res);
       alert("¡TE HAS REGISTRADO!");
       navigate("/login");
@@ -65,17 +66,17 @@ const Register = () => {
             type="text"
             id="calle"
             placeholder="Nombre de la calle"
-            {...register("calle", { required: true })}
+            {...register("direccion.calle", { required: true })}
           />
-          <label htmlFor="CP">Codigo Postal</label>
+          <label htmlFor="cp">Codigo Postal</label>
           <input
             type="text"
-            id="CP"
+            id="cp"
             placeholder="ej: 24004"
-            {...register("CP", { required: true, pattern: /^\d{5}$/ })}
+            {...register("direccion.cp", { required: true, pattern: /^\d{5}$/ })}
           />
           <p className="p_error">
-            {errors?.CP?.type === "pattern" &&
+            {errors?.cp?.type === "pattern" &&
               "*El Codigo Postal dede contener 5 digitos."}
           </p>
 
@@ -84,7 +85,7 @@ const Register = () => {
             type="text"
             id="ciudad"
             placeholder="Nombre de la ciudad"
-            {...register("ciudad", { required: true })}
+            {...register("direccion.ciudad", { required: true })}
           />
 
           <label htmlFor="pais">Pais</label>
@@ -92,18 +93,18 @@ const Register = () => {
             type="text"
             id="pais"
             placeholder="Nombre del Pais"
-            {...register("pais", { required: true })}
+            {...register("direccion.pais", { required: true })}
           />
         </div>
-        <label htmlFor="numero">Teléfono</label>
+        <label htmlFor="telefono">Teléfono</label>
         <input
           type="text"
-          id="numero"
-          {...register("numero", { required: true, pattern: /^[0-9]{9}$/ })}
+          id="telefono"
+          {...register("telefono", { required: true, pattern: /^[0-9]{9}$/ })}
           inputMode="numeric"
         />
         <p className="p_error">
-          {errors?.numero?.type === "pattern" &&
+          {errors?.telefono?.type === "pattern" &&
             "*El telefono debe contener 9 digitos"}
         </p>
 
