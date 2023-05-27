@@ -2,8 +2,8 @@ import EditarEjemplarForm from '../components/EditarAnimalesForm/EditarEJemplarF
 
 const Ejemplar = () => {
   return (
-    <>
-       <EditarEjemplarForm></EditarEjemplarForm>
+    <>  
+        <EditarEjemplarForm></EditarEjemplarForm>
     </>
    
   )
