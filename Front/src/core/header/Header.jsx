@@ -26,7 +26,6 @@ const Header = () => {
     </div>
       
 
-      
 
       <Link className="nav-li" to="/"></Link>
 
