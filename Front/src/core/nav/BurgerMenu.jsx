@@ -18,7 +18,7 @@ const BurgerMenu = ({ isOpen, toggleMenu }) => {
         <li><Link to="/register">Register</Link></li>
         {jwt &&(
           <>
-          <li><Link to="/animales">Especies</Link></li>
+          <li><Link to="/especies">Especies</Link></li>
           </>
         )}
       </ul>
