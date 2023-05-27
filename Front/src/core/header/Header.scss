@@ -4,7 +4,7 @@
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-around;
   padding: 10px;
   background-color:  rgba(11, 11, 11, 0.802);
   color: #fff;
@@ -29,17 +29,10 @@
       height: 400px; 
     }
   }
+.deslo{
+  margin-top: 55px;
+}
 
-  .nav-li {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 10px;
-    font-weight: bold;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 
 @media screen and (max-width: 768px) {

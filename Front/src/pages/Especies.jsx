@@ -1,4 +1,4 @@
-import "../styles/Animales.scss";
+import "../styles/Especies.scss";
 import  { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -26,9 +26,9 @@ const Especies = () => {
             <Link to={`/ejemplares/${especie._id}`}>
               <img src={especie.imagen}></img>
             </Link>
-            <h3>{especie.nombre}</h3>
-            <p>{especie.sexo}</p>
-            <p>{especie.raza}</p>
+            <h3>Especie: {especie.nombre}</h3>
+            <p>Genero: {especie.sexo}</p>
+            <p>Raza: {especie.raza}</p>
           </div>
         ))}
       </div>

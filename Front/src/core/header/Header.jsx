@@ -30,8 +30,9 @@ const Header = () => {
       <Link className="nav-li" to="/"></Link>
 
       {jwt &&(
-
-      <ButtonLogout className="nav-li"></ButtonLogout>  
+      <div className='deslo'>
+      <ButtonLogout></ButtonLogout>  
+      </div>
       )}
 
     </div> 
