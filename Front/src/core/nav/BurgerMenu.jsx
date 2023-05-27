@@ -1,5 +1,5 @@
 import React from 'react';
-import "../nav/BurgerMenu.scss";
+import "./BurgerMenu.scss";
 import { Link } from "react-router-dom";
 import { JwtContext } from "../../context/jwtContext"
 import { useContext } from 'react';
@@ -13,8 +13,8 @@ const BurgerMenu = ({ isOpen, toggleMenu }) => {
       {isOpen && (
         <nav className="burger-menu__nav">
            <ul>
-       <li> <Link to="">🏠Home</Link></li>
-        <li><Link to="/login">🔓Login</Link></li>
+       <li> <Link to="">Home</Link></li>
+        <li><Link to="/login">Login</Link></li>
         <li><Link to="/register">Register</Link></li>
         {jwt &&(
           <>

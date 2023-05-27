@@ -16,12 +16,16 @@ const Header = () => {
   };
 
   return (
-    <header className='header'>
-      <div>
+   
+   <div className='containervaca'>
+    <div className='burgerlog'>
             <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
             </div>    
+    <div className='vaca'>
+    <img className='logo' src="../SMART FARM (1).svg" alt="logo" />
+    </div>
+      
 
-      <img className='logo' src="/logo3.png" alt="logo" />
 
       <Link className="nav-li" to="/"></Link>
 
@@ -30,9 +34,9 @@ const Header = () => {
       <ButtonLogout className="nav-li"></ButtonLogout>  
       )}
 
+    </div> 
 
-
-    </header>
+    
   );
 };
 
