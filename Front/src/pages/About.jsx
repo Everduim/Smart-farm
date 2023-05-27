@@ -1,13 +1,15 @@
 import React from 'react'
-import "../src/styles/About.scss"
+import "../styles/About.scss"
 
 
 const About = () => {
+
   return (
-    <div>
-    <h1>¿QUIENES SOMOS?</h1>
+    <div className='font_about'>
+    <div className='container_about'>
+    <h1 className='titulo_about'>¿QUIENES SOMOS?</h1>
       <div>
-            <p>Somos un apasionado equipo de estudiantes de Full Stack
+            <p className='about_p'>Somos un apasionado equipo de estudiantes de Full Stack
              Development, dedicados a simplificar la gestión de granjas 
              a través de nuestra aplicación móvil. Nuestra misión es 
              brindarte herramientas poderosas y fáciles de usar para 
@@ -18,6 +20,7 @@ const About = () => {
              mismo y comienza a optimizar tu negocio agrícola!</p>
       </div>
 
+    </div>
     </div>
   )
 }
