@@ -10,6 +10,7 @@ import Ejemplar from "./pages/Ejemplar";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { RequireAuth } from "./components/RequireAuth";
+import NuevoEjemplar from "./pages/NuevoEjemplar";
 
 function App() {
   const [jwt, setJwt] = useState(null);
@@ -36,6 +37,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/logout" element={<Register />} />
+          <Route path="/ejemplares/nuevo" element={<NuevoEjemplar/>} />
         </Routes>
       </JwtContext.Provider>
     </>
