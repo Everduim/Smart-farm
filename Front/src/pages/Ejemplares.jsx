@@ -1,9 +1,9 @@
 import "../styles/AnimalesId.scss";
-import { useParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import  { useEffect, useState } from "react";
 import axios from "axios";
 
-const AnimalesID = () => {
+const Ejemplares = () => {
   const { id } = useParams();
   const [ejemplares, setEjemplares] = useState([]);
 
@@ -48,7 +48,10 @@ const AnimalesID = () => {
             </ul>
             <button onClick={()=>tryEliminar(ejemplar)}>x</button>
             
-            <button onClick={()=>tryPatch(ejemplar)}>editar</button>
+            <Link to={`/ejemplar/${ejemplar._id}`}>
+              <button >editar</button>
+            </Link>
+            
             
           </div>
         );
@@ -57,4 +60,4 @@ const AnimalesID = () => {
   );
 };
 
-export default AnimalesID;
+export default Ejemplares;

@@ -4,8 +4,9 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./core/header/Header";
 import "./App.css";
 import Home from "./pages/Home";
-import Animales from "./pages/Animales";
-import AnimalesID from "./pages/AnimalesID";
+import Especies from "./pages/Especies";
+import Ejemplares from "./pages/Ejemplares";
+import Ejemplar from "./pages/Ejemplar";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { RequireAuth } from "./components/RequireAuth";
@@ -22,14 +23,16 @@ function App() {
           <Route path="/" element={<Home />} />
 
           <Route
-            path="/animales"
+            path="/especies"
             element={
               <RequireAuth>
-                <Animales />
+                <Especies />
               </RequireAuth>
             }
           />
-          <Route path="/animales/:id" element={<AnimalesID />} />
+          
+          <Route path="/ejemplares/:id" element={<Ejemplares />} />
+          <Route path="/ejemplar/:id" element={<Ejemplar />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/logout" element={<Register />} />

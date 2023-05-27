@@ -21,7 +21,7 @@ const Login = () => {
       localStorage.setItem("user", res.data.user.email);
       setJwt(localStorage.getItem("token"));
       alert("¡HAS INICIADO SESIÓN!");
-       navigate("/animales");
+       navigate("/especies");
     });
   };
 
