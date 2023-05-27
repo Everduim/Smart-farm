@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Home.scss";
 const Home = () => {
   return (
-    <div className="container">
+    <div className="containerhome">
       <div className="texto-home">
         <h1 className="cabecera">
           ¡Presentamos "Smart Farm" - Tu Solución Completa de Gestión de
@@ -33,7 +33,7 @@ const Home = () => {
           explotaciones animales.
         </h3>
       </div>
-      <div className="login">
+      <div className="loginhome">
         <a href="/login">
           <button className="home4">Login</button>
         </a>

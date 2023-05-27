@@ -1,4 +1,4 @@
-import "../styles/AnimalesId.scss";
+import "../styles/Ejemplares.scss";
 import { Link, useParams } from "react-router-dom";
 import  { useEffect, useState } from "react";
 import axios from "axios";
@@ -46,7 +46,7 @@ const Ejemplares = () => {
               <img src={ejemplar.especie.imagen} ></img>
               <li><small>{ejemplar._id}</small></li>
             </ul>
-            <button onClick={()=>tryEliminar(ejemplar)}>x</button>
+            <button onClick={()=>tryEliminar(ejemplar)}>Eliminar</button>
             
             <Link to={`/ejemplar/${ejemplar._id}`}>
               <button >editar</button>
