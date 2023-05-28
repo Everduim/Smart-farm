@@ -1,5 +1,5 @@
 .login2 {
-  height: 90vh;
+  height: 87.6vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,44 +12,42 @@
 .form_login {
   width: 100%;
   max-width: 400px;
-  margin: 50px;
+  margin: 50px auto;
   padding: 20px;
   background-color: rgba(128, 128, 128, 0.5);
   border-radius: 5px;
-
-  label {
-    font-size: 25px;
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #fefeff;
-  }
-
-  .p_error {
-    border-radius: 10px;
-    color: rgb(243, 18, 18);
-    font-size: 15px;
-    padding: 8px;
-  }
-
-  input {
-   
-    width: 95%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border-color: #886214;
-    border-radius: 5px;
-    border-width: 5px;
-  }
 }
-.botlogin{
+
+.form_login label {
+  font-size: 25px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fefeff;
+}
+
+.form_login .p_error {
+  border-radius: 10px;
+  color: rgb(243, 18, 18);
+  font-size: 15px;
+  padding: 8px;
+}
+
+.form_login input {
+  width: 95%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-color: #886214;
+  border-radius: 5px;
+  border-width: 5px;
+}
+
+.botlogin {
   display: flex;
-  
-
-  justify-content: center; 
+  justify-content: center;
 }
 
-.boton_login{
+.boton_login {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,20 +61,27 @@
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+}
 
-  &:hover {
-  
-    transform: scale(1.1);
+.boton_login:hover {
+  transform: scale(1.1);
+}
+
+.boton_login:active {
+  transform: translateY(3px);
+}
+
+@media (max-width: 480px) {
+  .login2 {
+    // height: 844px;
+    padding: 20px;
   }
 
-  &:active {
-    transform: translateY(3px);
+  .form_login {
+    margin: 20px auto;
   }
 
-  @media (max-width: 480px) {
-    &:hover {
-      background-color: #654321;
-    }
+  .boton_login:hover {
+    background-color: #654321;
   }
-
 }

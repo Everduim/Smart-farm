@@ -3,8 +3,12 @@ $color-secundario: #8bc34a;
 $color-fondo: #f2f2f2;
 
 .containerhome {
-  height: 90vh;
-  max-width: 400%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 83.4vh;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: $color-fondo;
@@ -13,60 +17,67 @@ $color-fondo: #f2f2f2;
 
   .texto-home {
     margin-bottom: 20px;
-    text-align: center;
+    width: 60vh;
   }
 
   .cabecera {
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 20px;
     color: $color-primario;
+
+    .cabecera_Link {
+      text-decoration: none;
+      color: $color-primario;
+    }
   }
 
   .cabecera1 {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
     color: $color-primario;
   }
 
-  .texto,
   .texto1,
   .texto2,
-  .texto3,
   .texto4 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 17px;
+    text-align: center;
   }
-  .register{
+
+  .register {
     margin-top: 25px;
-    color: red;
+    font-weight: 500;
     font-size: 20px;
-   }
+  }
+  .span_register{
+    font-size: 18px;
+  }
 
   .api {
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     color: $color-primario;
   }
 
   .home-form {
     margin-top: 20px;
-    
-  }
-  .loginhome{
-    text-align: center;
-    
   }
 
+  .loginhome {
+    text-align: center;
+  }
 
   button.home4 {
     display: inline-block;
-    padding: 5px 35px;
-    background-color:$color-primario ;
-    color: #FFF;
+    padding: 5px 25px;
+    background-color: $color-primario;
+    color: #fff;
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -74,35 +85,41 @@ $color-fondo: #f2f2f2;
     font-size: 30px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    margin-top: px;
+    margin-top: 10px;
   }
-  
-  
+
   button.home4:hover {
-    background-color:$color-primario ;
+    background-color: $color-secundario;
     cursor: pointer;
     transform: scale(1.1);
     color: black;
   }
-  
+
   button.home4:active {
-    background-color: #8bc34a ;
+    background-color: #8bc34a;
     transform: translateY(1px);
   }
-  
- 
+
   button.home4 span {
     display: inline-block;
     vertical-align: middle;
+  }
+
+  @media (max-width: 390px) {
+    .containerhome {
+      height: 844px;
+    
+      
+    }
+    .texto-home{
+        width: 80%;
+      }
+    .cabecera{
+      font-size: xx-large;
+    }  
+    .cabecera1{
+      font-size: large;
+    }
     
   }
-  @media (max-width: 600px) {
-    .container {
-      max-width: 100%;
-    }
-  }
-  }
-
-  
-  
-
+}
