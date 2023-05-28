@@ -1,0 +1,93 @@
+$color-primario: #4caf50;
+$color-secundario: #8bc34a;
+$color-fondo: #f2f2f2;
+.container-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://cdn.pixabay.com/photo/2019/11/08/13/51/sunset-4611474_1280.jpg");
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.form_registro {
+  // height: 82vh;
+  background-color: rgba(11, 11, 11, 0.818);
+  width: 300px;
+  max-width: 400%;
+  margin: 40px;
+  padding: 20px;
+  margin-bottom: 39px;
+  border-radius: 5px;
+
+  // text-align: center;
+}
+label {
+  color: #f4f1f1;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: flex;
+
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-color: #886214;
+
+  border-radius: 5px;
+  border-width: 3px;
+
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1);
+    // color: black;
+  }
+
+  // &:focus {
+  //   outline: none;
+  //   border-color: #009688;
+  // }
+}
+
+.p_error {
+  color: red;
+  margin-bottom: 10px;
+}
+.btregis {
+  display: flex;
+  margin-top: 15px;
+
+  justify-content: center;
+}
+
+.boton_registro {
+  text-align: center;
+  background-color: #886214;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.p_error {
+  color: red;
+}
+
+@media (max-width: 600px) {
+  .form_registro {
+    height: 85vh;
+    max-width: 100%;
+  }
+}

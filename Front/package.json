@@ -15,7 +15,9 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
     "react-router-dom": "^6.11.2",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "sweetalert2": "^11.7.5",
+    "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

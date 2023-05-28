@@ -1,0 +1,87 @@
+.login2 {
+  height: 87.6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.agromaquinaria.es/noticias/fotos/la-ganaderia-extensiva-un-0967446001629281468.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.form_login {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+}
+
+.form_login label {
+  font-size: 25px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fefeff;
+}
+
+.form_login .p_error {
+  border-radius: 10px;
+  color: rgb(243, 18, 18);
+  font-size: 15px;
+  padding: 8px;
+}
+
+.form_login input {
+  width: 95%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-color: #886214;
+  border-radius: 5px;
+  border-width: 5px;
+}
+
+.botlogin {
+  display: flex;
+  justify-content: center;
+}
+
+.boton_login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #886214;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton_login:hover {
+  transform: scale(1.1);
+}
+
+.boton_login:active {
+  transform: translateY(3px);
+}
+
+@media (max-width: 480px) {
+  .login2 {
+    // height: 844px;
+    padding: 20px;
+  }
+
+  .form_login {
+    margin: 20px auto;
+  }
+
+  .boton_login:hover {
+    background-color: #654321;
+  }
+}

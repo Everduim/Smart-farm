@@ -1,0 +1,57 @@
+
+.containervaca {
+ 
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  padding: 10px;
+  background-color:  rgba(11, 11, 11, 0.802);
+  color: #fff;
+
+  .burgerlog {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      margin-left: 10px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .vaca {
+    .logo {
+      margin-top: 75px;
+      width: 400px;
+      height: 400px; 
+    }
+  }
+.deslo{
+  margin-top: 10px;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+  .containervaca {
+    flex-direction: row;
+    padding: 0px;
+    text-align: center;
+
+    .vaca {
+      
+
+      .logo {
+        width: 300px; 
+        height: 350px; 
+      }
+    }
+
+    .burgerlog {
+      margin-top: 10px;
+    }
+  }
+}
