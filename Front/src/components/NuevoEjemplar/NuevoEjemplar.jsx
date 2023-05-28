@@ -2,150 +2,148 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { JwtContext } from "../../context/jwtContext";
-import "./EditarEjemplarForm.scss";
-import Especies from "../../pages/Especies";
 
 const NuevoEjemplar = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [ejemplar, setEjemplar] = useState(null);
+  const [ejemplar, setEjemplar] = useState({
+    identificador: "",
+    edad: "",
+    peso: "",
+    salud: "",
+    especie: "",
+  });
   const { token } = useContext(JwtContext);
   const [especies, setEspecies] = useState([]);
-
-  const getEjemplar = async (id) => {
-    const resultado = await axios.get(
-      `http://localhost:4000/ejemplar/${id}?token=${token}`
-    );
-    setEjemplar(resultado.data);
-  };
+  const [sexos, setSexos] = useState([]);
+  const [razas, setRazas] = useState([]);
 
   const getEspecies = async () => {
-    const resultado = await axios.get("http://localhost:4000/especies");
-    setEspecies(resultado.data);
+    try {
+      const resultado = await axios.get("http://localhost:4000/especies");
+      setEspecies(resultado.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getSexosYRazas = (especieId) => {
+    const especieSeleccionada = especies.find((especie) => especie._id === especieId);
+    if (especieSeleccionada) {
+      setSexos([especieSeleccionada.sexo]);
+      setRazas([especieSeleccionada.raza]);
+    }
   };
 
   useEffect(() => {
-    getEjemplar(id);
     getEspecies();
   }, []);
 
-  async function tryActualizar(ejemplar, event) {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setEjemplar((prevEjemplar) => ({
+      ...prevEjemplar,
+      [name]: value,
+    }));
+
+    if (name === "especie") {
+      getSexosYRazas(value);
+    }
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      await axios.put(
-        `http://localhost:4000/ejemplar/${ejemplar._id}`,
-        ejemplar
-      );
-      setEjemplar(null);
+      await axios.post("http://localhost:4000/ejemplar", ejemplar, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setEjemplar({
+        identificador: "",
+        edad: "",
+        peso: "",
+        salud: "",
+        especie: "",
+      });
       navigate("/especies"); // Redirigir a la página de "Especies"
-    } catch (e) {
-      console.log(e);
+    } catch (error) {
+      console.log(error);
     }
-  }
+  };
 
   return (
     <>
-      {ejemplar !== null && (
-        <div key={ejemplar._id} className="container_ejemplar">
-          <form className="animal_form">
-            <img className="imagen_a" src={ejemplar.especie.imagen} alt="" />
-            <ul className="inputs-ul">
-              <li className="input-li">
-                <small>Identificador:</small>
-                <input
-                  value={ejemplar.identificador}
-                  onChange={(e) =>
-                    setEjemplar({ ...ejemplar, identificador: e.target.value })
-                  }
-                ></input>
-              </li>
-              <li>
-                <small>Edad: </small>
-                <input
-                  value={ejemplar.edad}
-                  onChange={(e) =>
-                    setEjemplar({ ...ejemplar, edad: e.target.value })
-                  }
-                ></input>
-              </li>
-              <li>
-                <small>Peso: </small>
-                <input
-                  value={ejemplar.peso}
-                  onChange={(e) =>
-                    setEjemplar({ ...ejemplar, peso: e.target.value })
-                  }
-                ></input>
-              </li>
-              <li>
-                <small>Salud: </small>
-                <input
-                  value={ejemplar.salud}
-                  onChange={(e) =>
-                    setEjemplar({ ...ejemplar, salud: e.target.value })
-                  }
-                ></input>
-              </li>
-              <li>
-                {ejemplar.especie.nombre} - {ejemplar.especie.raza} -{" "}
-                {ejemplar.especie.sexo}
-              </li>
-            </ul>
+      {especies.length > 0 && (
+        <div className="container_ejemplar">
+          <form className="animal_form" onSubmit={handleSubmit}>
+            {/* Resto del formulario */}
+            <input
+              type="text"
+              name="identificador"
+              value={ejemplar.identificador}
+              onChange={handleInputChange}
+              placeholder="Identificador"
+            />
+            <input
+              type="text"
+              name="edad"
+              value={ejemplar.edad}
+              onChange={handleInputChange}
+              placeholder="Edad"
+            />
+            <input
+              type="text"
+              name="peso"
+              value={ejemplar.peso}
+              onChange={handleInputChange}
+              placeholder="Peso"
+            />
+            <input
+              type="text"
+              name="salud"
+              value={ejemplar.salud}
+              onChange={handleInputChange}
+              placeholder="Salud"
+            />
             <select
-              value={ejemplar.especie.nombre}
-              onChange={(e) =>
-                setEjemplar({
-                  ...ejemplar,
-                  especie: { ...ejemplar.especie, nombre: e.target.value },
-                })
-              }
+              name="especie"
+              value={ejemplar.especie}
+              onChange={handleInputChange}
             >
               <option value="">Seleccione una especie</option>
               {especies.map((especie) => (
-                <option key={especie._id} value={especie.nombre}>
+                <option key={especie._id} value={especie._id}>
                   {especie.nombre}
                 </option>
               ))}
             </select>
-
             <select
-              value={ejemplar.especie.sexo}
-              onChange={(e) =>
-                setEjemplar({
-                  ...ejemplar,
-                  especie: { ...ejemplar.especie, sexo: e.target.value },
-                })
-              }
+              name="sexo"
+              value={ejemplar.sexo}
+              onChange={handleInputChange}
             >
               <option value="">Seleccione el sexo</option>
-              {especies.map((especie) => (
-                <option key={especie._id} value={especie.sexo}>
-                  {especie.sexo}
+              {sexos.map((sexo) => (
+                <option key={sexo} value={sexo}>
+                  {sexo}
                 </option>
               ))}
             </select>
-
             <select
-              value={ejemplar.especie.raza}
-              onChange={(e) =>
-                setEjemplar({
-                  ...ejemplar,
-                  especie: { ...ejemplar.especie, raza: e.target.value },
-                })
-              }
+              name="raza"
+              value={ejemplar.raza}
+              onChange={handleInputChange}
             >
               <option value="">Seleccione la raza</option>
-              {especies.map((especie) => (
-                <option key={especie._id} value={especie.raza}>
-                  {especie.raza}
+              {razas.map((raza) => (
+                <option key={raza} value={raza}>
+                  {raza}
                 </option>
               ))}
             </select>
 
-            <button onClick={(e) => tryActualizar(ejemplar, e)}>
-              Actualizar
-            </button>
+            {/* Resto del formulario */}
+            <button type="submit">Insertar</button>
             <Link to="/especies">
               <button>Cancelar</button>
             </Link>
