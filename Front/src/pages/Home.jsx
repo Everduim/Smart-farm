@@ -7,10 +7,10 @@ const Home = () => {
     <div className="containerhome">
       <div className="texto-home">
         <h1 className="cabecera">
-          ¡Hola somos{" "}
+          ¡Hola somos
           <Link className="cabecera_Link" to="/about">
-            {" "}
-            "Smart Farm" !
+           
+            "Smart Farm"!
           </Link>
         </h1>
         <h3 className="cabecera1">
