@@ -1,10 +1,10 @@
-import React from 'react'
+import EditarEjemplarForm from '../components/EditarAnimalesForm/EditarEJemplarForm'
 
 
 const NuevoEjemplarA = () => {
   return (
     <div>
-   
+    <EditarEjemplarForm></EditarEjemplarForm>
     </div>
   )
 }
