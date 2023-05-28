@@ -7,13 +7,24 @@ import "../styles/Ejemplares.scss"
 export const Ejemplares = () => {
   return (
     <>
-    <div></div>
-      <Link to="/ejemplares/nuevo">
-      <button>EDU-EMI</button>
-      </Link>
-      <div className='div-general'>
-        <EjemplaresA></EjemplaresA>
-      </div>
+      <body>
+
+        <div className='button_div'>
+        <Link to="/especies">
+          <button>VOLVER</button>
+        </Link>
+        
+          <Link to="/ejemplares/nuevo">
+            <button>NUEVO</button>
+          </Link>
+          
+        </div>
+
+        <div className='div-general'>
+          <EjemplaresA></EjemplaresA>
+        </div>
+      </body>
+
     </>
   )
 }

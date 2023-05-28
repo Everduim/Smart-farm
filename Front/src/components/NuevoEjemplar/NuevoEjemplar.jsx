@@ -2,6 +2,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { JwtContext } from "../../context/jwtContext";
+import "./NuevoEjemplar.scss"
 
 const NuevoEjemplar = () => {
   const { id } = useParams();
@@ -141,8 +142,6 @@ const NuevoEjemplar = () => {
                 </option>
               ))}
             </select>
-
-            {/* Resto del formulario */}
             <button type="submit">Insertar</button>
             <Link to="/especies">
               <button>Cancelar</button>
