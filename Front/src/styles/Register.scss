@@ -2,8 +2,6 @@ $color-primario: #4caf50;
 $color-secundario: #8bc34a;
 $color-fondo: #f2f2f2;
 .container-register {
-  height: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,13 +12,13 @@ $color-fondo: #f2f2f2;
   background-position: center;
 }
 .form_registro {
-  height: 100vh;
+  // height: 82vh;
   background-color: rgba(11, 11, 11, 0.818);
   width: 300px;
   max-width: 400%;
   margin: 40px;
   padding: 20px;
-  margin-bottom: 1px;
+  margin-bottom: 39px;
   border-radius: 5px;
 
   // text-align: center;
@@ -29,6 +27,7 @@ label {
   color: #f4f1f1;
   font-weight: bold;
   font-size: 15px;
+  margin-left: 4px;
 }
 
 input[type="text"],
